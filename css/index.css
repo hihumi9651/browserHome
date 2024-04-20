@@ -1,0 +1,91 @@
+body {
+        /* 画像ファイルの指定 */
+        background-image: url("../img/background.jpeg");
+
+        /* 画像を常に天地左右の中央に配置 */
+        background-position: center center;
+    
+        /* 画像をタイル状に繰り返し表示しない */
+        background-repeat: no-repeat;
+    
+        /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+        background-attachment: fixed;
+    
+        /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+        background-size: cover;
+    
+        /* 背景画像が読み込まれる前に表示される背景のカラー */
+        background-color: #464646;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* 横方向の中央揃え */
+    align-items: center; /* 縦方向の中央揃え */
+    height: 100vh; /* 画面の高さいっぱいにDivを広げるために必要 */
+}
+
+.container div {
+    padding: 10px; /* 見やすさのために追加 */
+}
+
+.container div:first-child {
+    flex: 6;
+}
+
+.container div:last-child {
+    flex: 4;
+}
+
+.right-list {
+    display: flex;
+    flex-direction: column; /* 縦方向に並べる */
+}
+
+.right-list a {
+    display: block; /* リンクをブロック要素に変更して、全幅を占めるようにする */
+    padding: 40px; /* 見やすさのために追加 */
+    text-decoration: none; /* リンクの下線を削除 */
+    color: white; /* リンクの色を指定 */
+    margin: auto;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease; /* アニメーションの設定 */
+}
+
+.right-list a:hover {
+    color: lightseagreen; /* テキストの色を赤に変更 */
+    transform: scale(1.1); /* テキストを1.1倍に拡大 */
+}
+
+.main-body {
+    min-height: 80vh;
+}
+
+.google_search {
+    margin: auto;
+}
+
+.google_search form{
+    display: flex; /* Flexコンテナを作成 */
+    justify-content: center; /* 横方向の中央揃え */
+}
+
+
+.google_search form input{
+    border-radius: 30px; /* 角の丸みの半径を指定 */
+    padding: 15px; /* フォームの内側の余白を設定（任意） */
+    border: none; /* フォームの境界線を設定（任意） */
+    transition: transform 0.3s ease, color 0.5s ease; /* アニメーションの設定 */
+    background: linear-gradient(to right, whitesmoke, lightseagreen); /* グラデーションの設定 */
+
+}
+
+.google_search form input:hover{
+    transform: scale(1.1); /* テキストを1.1倍に拡大 */
+    background: whitesmoke; /* グラデーションの設定 */
+}
+
+#searchBox {
+    width: 50%;
+}
